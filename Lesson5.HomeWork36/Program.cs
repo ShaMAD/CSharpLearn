@@ -2,7 +2,6 @@
 //[3, 7, 23, 12] -> 19
 //[-4, -6, 89, 6]-> 0
 
-
 using System;
 
 namespace Lesson5.HomeWork36
@@ -11,24 +10,40 @@ namespace Lesson5.HomeWork36
     {
         static void Main(string[] args)
         {
-            int[] intRandomArray = new int[4];
-
-            for (int i = 0; i < intRandomArray.Length; i++)
+            int OddPositionSumm(int[] array)
             {
-                Random random = new Random();
-                intRandomArray[i] = random.Next(-99, 100);
+                int oddPositionSumm = 0;
+
+                for (int i = 0; i < array.Length; i++)
+                    oddPositionSumm += (i % 2 == 1) ? array[i] : 0;
+                return oddPositionSumm;
             }
+          
+            int[] intRandomArray = InitiateAndFillArray(5, -99, 100);
 
-            int oddPositionSumm = 0;
+            int oddPositionSumm = OddPositionSumm(intRandomArray);
 
-            for (int i = 0; i < intRandomArray.Length; i++)
-            {
-                Console.Write(intRandomArray[i] + " ");
-                oddPositionSumm += (i % 2 == 1) ? intRandomArray[i] : 0;
-            }
+            Console.WriteLine($"Сумма нечётных позиций {intRandomArray.Length} элементов массива:");
+            Console.Write("[");
 
-            Console.Write("-> ");
-            Console.WriteLine(oddPositionSumm);
+            foreach (var item in intRandomArray)
+                Console.Write(" " + item);
+
+            Console.WriteLine(" ] -> " + oddPositionSumm);
+        }
+        /// <summary>
+        /// Задание размера массива и заполение случайными значениями
+        /// </summary>
+        /// <param name="length">Размер массива</param>
+        /// <param name="minvalue">Минимальное число</param>
+        /// <param name="maxvalue">Максимальное число</param>
+        /// <returns>Заполненный массив</returns>
+        private static int[] InitiateAndFillArray(int length, int minvalue, int maxvalue)
+        {
+            int[] array = new int[length];
+            for (int i = 0; i < array.Length; i++)
+                array[i] = new Random().Next(minvalue, maxvalue);
+            return array;
         }
     }
 }

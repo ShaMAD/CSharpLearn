@@ -3,6 +3,8 @@
 //[-4, -6, 89, 6]-> 0
 
 
+using System;
+
 namespace Lesson5.HomeWork36
 {
     internal class Program

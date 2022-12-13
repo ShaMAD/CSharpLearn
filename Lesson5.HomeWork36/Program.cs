@@ -35,6 +35,7 @@ namespace Lesson5.HomeWork36
                     Console.Write(intRandomArray[i] + " ");
                     oddPositionSumm += (i % 2 == 1) ? intRandomArray[i] : 0;
                 }
+                return oddPositionSumm;
             }
         }
         /// <summary>

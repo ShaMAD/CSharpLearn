@@ -2,12 +2,11 @@
 
 //0, 7, 8, -2, -2 -> 2
 
-//1, -7, 567, 89, 223-> 3
+//1, -7, 567, 89, 223-> 4
 
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Globalization;
 
 namespace Lesson6.HomeWork41
 {
@@ -15,7 +14,7 @@ namespace Lesson6.HomeWork41
     {
         static void Main(string[] args)
         {
-            List<double> listNumbers = GetUserInputIntegerList();
+            List<int> listNumbers = GetUserInputIntegerList();
 
             var numGreatZero = listNumbers
                 .Where(x => x > 0)
@@ -31,28 +30,24 @@ namespace Lesson6.HomeWork41
         /// Получение коллекции введенных с клавиатуры чисел
         /// </summary>
         /// <returns>Коллекция чисел</returns>
-        private static List<double> GetUserInputIntegerList()
+        private static List<int> GetUserInputIntegerList()
         {
-            double parsedNubmer = 0;
+            int parsedNubmer = 0;
             string userInput = string.Empty;
-            List<double> list = new List<double>();
+            bool correctImput = false;
 
+            List<int> list = new List<int>();
+            
             Console.WriteLine("Введите любые числа, каждое с новой строки:");
 
-            while (true)
+            do
             {
                 userInput = Console.ReadLine()!.Replace('.', ',').Trim();
-
-                try
-                {
-                    parsedNubmer = double.Parse(userInput);
+                correctImput = int.TryParse(userInput, out parsedNubmer);
+                if (correctImput) 
                     list.Add(parsedNubmer);
-                }
-                catch (Exception)
-                {
-                    break;
-                } 
-            }
+
+            } while (correctImput);
             return list;
         }
     }

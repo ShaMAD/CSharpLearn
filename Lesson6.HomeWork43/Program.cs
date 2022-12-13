@@ -3,7 +3,7 @@
 
 //b1 = 2, k1 = 5, b2 = 4, k2 = 9-> (-0, 5; -0, 5)
 
-using System.Collections.Generic;
+using System;
 
 namespace Lesson6.HomeWork43
 {

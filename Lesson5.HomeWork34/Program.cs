@@ -8,7 +8,7 @@ namespace Lesson5.HomeWork34
     {
         static void Main(string[] args)
         {
-            int[] intRandomArray = new int[10];
+            int[] intRandomArray = new int[4];
 
             for (int i = 0; i < intRandomArray.Length; i++)
             {

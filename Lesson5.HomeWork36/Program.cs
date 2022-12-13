@@ -27,24 +27,14 @@ namespace Lesson5.HomeWork36
             {
                 int oddPositionSumm = 0;
 
-                for (int i = 0; i < array.Length; i++)
-                    oddPositionSumm += (i % 2 == 1) ? array[i] : 0;
-                return oddPositionSumm;
+            for (int i = 0; i < intRandomArray.Length; i++)
+            {
+                Console.Write(intRandomArray[i] + " ");
+                oddPositionSumm += (i % 2 == 1) ? intRandomArray[i] : 0;
             }
-        }
-        /// <summary>
-        /// Задание размера массива и заполение случайными значениями
-        /// </summary>
-        /// <param name="length">Размер массива</param>
-        /// <param name="minvalue">Минимальное число</param>
-        /// <param name="maxvalue">Максимальное число</param>
-        /// <returns>Заполненный массив</returns>
-        private static int[] InitiateAndFillArray(int length, int minvalue, int maxvalue)
-        {
-            int[] array = new int[length];
-            for (int i = 0; i < array.Length; i++)
-                array[i] = new Random().Next(minvalue, maxvalue);
-            return array;
+
+            Console.Write("-> ");
+            Console.WriteLine(oddPositionSumm);
         }
     }
 }

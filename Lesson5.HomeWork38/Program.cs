@@ -34,6 +34,18 @@ namespace Lesson5.HomeWork38
                 }
                 return maxvalue - minvalue;
             }
+
+            int[] intRandomArray = InitiateAndFillArray(4, 1, 100);
+
+            Console.WriteLine("Разница между максимальным и минимальным элементом массива:");
+            Console.Write("[");            
+
+            foreach (var item in intRandomArray)
+                Console.Write(" "+ item);
+
+            int raznostMinMax = RaznostMinMax(intRandomArray);
+
+            Console.WriteLine(" ] -> " + raznostMinMax);
         }
         /// <summary>
         /// Задание размера массива и заполение случайными значениями

@@ -27,11 +27,8 @@ namespace Lesson5.HomeWork36
             {
                 int oddPositionSumm = 0;
 
-                for (int i = 0; i < intRandomArray.Length; i++)
-                {
-                    Console.Write(intRandomArray[i] + " ");
-                    oddPositionSumm += (i % 2 == 1) ? intRandomArray[i] : 0;
-                }
+                for (int i = 1; i < intRandomArray.Length; i += 2)
+                    oddPositionSumm += intRandomArray[i];
                 return oddPositionSumm;
             }
         }

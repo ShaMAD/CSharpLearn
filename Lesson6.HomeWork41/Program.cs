@@ -41,7 +41,7 @@ namespace Lesson6.HomeWork41
 
             while (true)
             {
-                userInput = Console.ReadLine()!.Replace('.', ',');
+                userInput = Console.ReadLine()!.Replace('.', ',').Trim();
 
                 try
                 {

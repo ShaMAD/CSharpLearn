@@ -9,7 +9,7 @@ namespace Lesson5.HomeWork36
     internal class Program
     {
         static void Main(string[] args)
-        { 
+        {
             int[] intRandomArray = InitiateAndFillArray(5, -99, 100);
 
             int oddPositionSumm = OddPositionSumm(intRandomArray);
@@ -36,19 +36,20 @@ namespace Lesson5.HomeWork36
                     oddPositionSumm += (i % 2 == 1) ? intRandomArray[i] : 0;
                 }
             }
-            /// <summary>
-            /// Задание размера массива и заполение случайными значениями
-            /// </summary>
-            /// <param name="length">Размер массива</param>
-            /// <param name="minvalue">Минимальное число</param>
-            /// <param name="maxvalue">Максимальное число</param>
-            /// <returns>Заполненный массив</returns>
-            private static int[] InitiateAndFillArray(int length, int minvalue, int maxvalue)
-            {
-                int[] array = new int[length];
-                for (int i = 0; i < array.Length; i++)
-                    array[i] = new Random().Next(minvalue, maxvalue);
-                return array;
-            }
         }
+        /// <summary>
+        /// Задание размера массива и заполение случайными значениями
+        /// </summary>
+        /// <param name="length">Размер массива</param>
+        /// <param name="minvalue">Минимальное число</param>
+        /// <param name="maxvalue">Максимальное число</param>
+        /// <returns>Заполненный массив</returns>
+        private static int[] InitiateAndFillArray(int length, int minvalue, int maxvalue)
+        {
+            int[] array = new int[length];
+            for (int i = 0; i < array.Length; i++)
+                array[i] = new Random().Next(minvalue, maxvalue);
+            return array;
+        }
+    }
 }

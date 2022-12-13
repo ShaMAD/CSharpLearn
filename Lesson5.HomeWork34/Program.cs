@@ -8,7 +8,7 @@ namespace Lesson5.HomeWork34
     {
         static void Main(string[] args)
         {
-            int[] intRandomArray = new int[10];
+            int[] intRandomArray = new int[4];
 
             for (int i = 0; i < intRandomArray.Length; i++)
             {
@@ -16,14 +16,14 @@ namespace Lesson5.HomeWork34
                 intRandomArray[i] = random.Next(100, 1000);
             }
 
-            var oddNumbersCount = intRandomArray
-                .Where(e => e % 2 == 0)
-                .Count();
-
             foreach (var item in intRandomArray)
             {
                 Console.Write(item + " ");
             }
+
+            var oddNumbersCount = intRandomArray
+                .Where(e => e % 2 == 0)
+                .Count();
 
             Console.Write("-> ");
             Console.WriteLine(oddNumbersCount);

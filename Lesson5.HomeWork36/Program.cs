@@ -22,9 +22,6 @@ namespace Lesson5.HomeWork36
 
             Console.WriteLine(" ] -> " + oddPositionSumm);
 
-            Console.Write("-> ");
-            Console.WriteLine(oddPositionSumm);
-
 
             int OddPositionSumm(int[] array)
             {

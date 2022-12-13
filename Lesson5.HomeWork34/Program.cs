@@ -25,7 +25,7 @@ namespace Lesson5.HomeWork34
 
             }
 
-            //var oddNumbersCount = intRandomArray
+            //var oddNumbersCountLinq = intRandomArray
             //    .Where(e => e % 2 == 0)
             //    .Count();
 

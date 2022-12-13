@@ -1,6 +1,7 @@
 ﻿//Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
 
-//b1 = 2, k1 = 5, b2 = 4, k2 = 9-> (-0, 5; -0,5)
+
+//b1 = 2, k1 = 5, b2 = 4, k2 = 9-> (-0, 5; -0, 5)
 
 using System.Collections.Generic;
 
@@ -11,9 +12,21 @@ namespace Lesson6.HomeWork43
         static void Main(string[] args)
         {
             double[] coordinatesList = GetUserInputCoordinatesList();
+
+            Console.Write("[");
+            foreach (var item in coordinatesList)
+                Console.Write(" " + item);
+            Console.WriteLine(" ]");
+
+
+            // x = (b2-b1)/(k1-k2)
+            double x = (coordinatesList[3] - coordinatesList[2])
+                  / (coordinatesList[0] - coordinatesList[1]);
+
+            //y = k1 * (b2-b1)/(k1-k2) + b1
+            double y = coordinatesList[0] * x + coordinatesList[2];
+            Console.WriteLine("x: " + x + ", y: " + y);
             
-
-
         }
         private static double[] GetUserInputCoordinatesList()
         {
@@ -21,19 +34,20 @@ namespace Lesson6.HomeWork43
             string userInput = string.Empty;
 
             string coordinateNames = "kb";
-            double array = new Array[4];
+            double [] inputArray = new double[4];
 
-            for (int j = 0; j < 2; j++)
+            for (int i = 0, j = 0; i < 2; i++)
             {
-                for (int i = 1; i < 3; i++)
+                for (int k = 1; k < 3; k++)
                 {
-                    Console.WriteLine("Введите значение координаты " + coordinateNames[j] + i + ": ");
+                    Console.WriteLine("Введите значение координаты " + coordinateNames[i] + k + ": ");
                     userInput = Console.ReadLine()!.Replace('.', ',').Trim();
 
                     try
                     {
                         parsedNubmer = double.Parse(userInput);
-                        array[i+j] = parsedNubmer;
+                        inputArray[j] = parsedNubmer;
+                        j++;
                     }
                     catch (Exception)
                     {
@@ -43,7 +57,7 @@ namespace Lesson6.HomeWork43
                 }
             }
             
-            return array;
+            return inputArray;
         }
     }
 }

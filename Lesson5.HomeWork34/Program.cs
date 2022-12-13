@@ -16,14 +16,18 @@ namespace Lesson5.HomeWork34
                 intRandomArray[i] = random.Next(100, 1000);
             }
 
+            int oddNumbersCount = 0;
+
             foreach (var item in intRandomArray)
             {
                 Console.Write(item + " ");
+                oddNumbersCount += (item % 2 == 0) ? 1 : 0;
+
             }
 
-            var oddNumbersCount = intRandomArray
-                .Where(e => e % 2 == 0)
-                .Count();
+            //var oddNumbersCount = intRandomArray
+            //    .Where(e => e % 2 == 0)
+            //    .Count();
 
             Console.Write("-> ");
             Console.WriteLine(oddNumbersCount);

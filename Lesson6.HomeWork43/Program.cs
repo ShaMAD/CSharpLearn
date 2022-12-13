@@ -23,8 +23,9 @@ namespace Lesson6.HomeWork43
             double x = (coordinatesList[3] - coordinatesList[2])
                   / (coordinatesList[0] - coordinatesList[1]);
 
-            //y = k1 * (b2-b1)/(k1-k2) + b1
+            //y = k1 * x + b1
             double y = coordinatesList[0] * x + coordinatesList[2];
+
             Console.WriteLine("x: " + x + ", y: " + y);
             
         }

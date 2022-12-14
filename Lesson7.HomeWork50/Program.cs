@@ -16,26 +16,66 @@ namespace Lesson7.HomeWork50
     {
         static void Main(string[] args)
         {
-            double[,] doubleArray = MultiArray.InitiateAndFillMultiArrayDouble(5, 5, 0, 10);
-            MultiArray.PrintMultiArrayDouble(doubleArray);
+            int[,] integerArray = InitiateAndFillMultiArrayInteger(
+                length: 7,
+                heigth: 5,
+                minvalue: 10,
+                maxvalue: 100);
 
+            PrintMultiArrayInteger(integerArray);
+            
+            int inputInteger = 0;
+
+            try
+            {
+                Console.Write("Введите значение для поиска: ");
+                string userInput = Console.ReadLine()!;
+                inputInteger = int.Parse(userInput);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Ошибка преобразования строки в число!");
+                Environment.Exit(-100);
+            }
+
+            FindInMultiArrayInteger(integerArray, inputInteger);
 
         }
-    }
-    class MultiArray
-    {
+
+
+        /// <summary>
+        /// Поиск числа в двумерном массиве
+        /// </summary>
+        /// <param name="array">Массив для поиска</param>
+        /// <param name="value">Число для поиска</param>
+        public static void FindInMultiArrayInteger(int[,] array, int value)
+        {
+            bool isFound = false;
+
+            for (int i = 0; i < array.GetLength(0) && !isFound; i++)
+            {
+                for (int j = 0; j < array.GetLength(1) && !isFound; j++)
+                {
+                    if (array[i,j] == value)
+                    {
+                        isFound = true;
+                        Console.WriteLine($"Введенное значение '{value}' найдено в индексах [{i},{j}]");
+                    }
+                }
+            }
+            if (isFound == false)
+                Console.WriteLine("Введенное значение '" + value + "' не найдено в массиве");
+        }
         /// <summary>
         /// Печать двумерного массива
         /// </summary>
         /// <param name="array">Консольный вывод</param>
-        public static void PrintMultiArrayDouble(double[,] array)
+        public static void PrintMultiArrayInteger(int[,] array)
         {
             for (int i = 0; i < array.GetLength(0); i++)
             {
                 for (int j = 0; j < array.GetLength(1); j++)
-                {
                     Console.Write(array[i, j] + " ");
-                }
                 Console.WriteLine();
             }
         }
@@ -54,11 +94,7 @@ namespace Lesson7.HomeWork50
 
             for (int i = 0; i < array.GetLength(0); i++)
                 for (int j = 0; j < array.GetLength(1); j++)
-                {
                     array[i, j] =  new Random().Next(minvalue, maxvalue);
-                }
-
-
             return array;
         }
     }

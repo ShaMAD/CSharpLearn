@@ -7,6 +7,8 @@
 
 //17->такого числа в массиве нет
 
+using System;
+
 namespace Lesson7.HomeWork50
 {
     internal class Program

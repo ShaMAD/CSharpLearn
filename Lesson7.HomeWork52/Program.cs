@@ -6,6 +6,8 @@
 //8 4 2 4
 //Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
+using System;
+
 namespace Lesson7.HomeWork52
 {
     internal class Program

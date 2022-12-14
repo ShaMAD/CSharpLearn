@@ -51,8 +51,8 @@ namespace Lesson7.HomeWork47
         /// </summary>
         /// <param name="length">Количество столбцов массива</param>
         /// <param name="heigth">Количество строк массива</param>
-        /// <param name="minvalue">Минимальное значение для заолнения массива</param>
-        /// <param name="maxvalue">Максимальное значение для заолнения массива</param>
+        /// <param name="minvalue">Минимальное значение для заполнения массива</param>
+        /// <param name="maxvalue">Максимальное значение для заполнения массива</param>
         /// <returns>Двумерный массиы</returns>
         public static double[,] InitiateAndFillMultiArrayDouble(int length, int heigth, int minvalue, int maxvalue)
         {

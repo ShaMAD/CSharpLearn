@@ -47,13 +47,13 @@ namespace Lesson7.HomeWork47
         }
 
         /// <summary>
-        /// 
+        /// Иницилизация и заполнение двумерного массива вещественными числами
         /// </summary>
-        /// <param name="length"></param>
-        /// <param name="heigth"></param>
-        /// <param name="minvalue"></param>
-        /// <param name="maxvalue"></param>
-        /// <returns></returns>
+        /// <param name="length">Количество столбцов массива</param>
+        /// <param name="heigth">Количество строк массива</param>
+        /// <param name="minvalue">Минимальное значение для заолнения массива</param>
+        /// <param name="maxvalue">Максимальное значение для заолнения массива</param>
+        /// <returns>Двумерный массиы</returns>
         public static double[,] InitiateAndFillMultiArrayDouble(int length, int heigth, int minvalue, int maxvalue)
         {
             double[,] array = new double[length, heigth];

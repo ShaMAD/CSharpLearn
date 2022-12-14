@@ -3,15 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson5.HomeWork34", "Lesson5.HomeWork34\Lesson5.HomeWork34.csproj", "{AA59DC30-832F-4460-8455-6B643886C73E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson5.HomeWork34", "Lesson5.HomeWork34\Lesson5.HomeWork34.csproj", "{AA59DC30-832F-4460-8455-6B643886C73E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson5.HomeWork36", "Lesson5.HomeWork36\Lesson5.HomeWork36.csproj", "{DE4C3A7C-568D-436D-B4B1-9CE142EB0EF7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson5.HomeWork36", "Lesson5.HomeWork36\Lesson5.HomeWork36.csproj", "{DE4C3A7C-568D-436D-B4B1-9CE142EB0EF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson5.HomeWork38", "Lesson5.HomeWork38\Lesson5.HomeWork38.csproj", "{AA78C06C-E1D3-4377-84FA-911928879882}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson5.HomeWork38", "Lesson5.HomeWork38\Lesson5.HomeWork38.csproj", "{AA78C06C-E1D3-4377-84FA-911928879882}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson6.HomeWork41", "Lesson6.HomeWork41\Lesson6.HomeWork41.csproj", "{F18597F4-01B9-4B99-803D-4DB405A6B804}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson6.HomeWork41", "Lesson6.HomeWork41\Lesson6.HomeWork41.csproj", "{F18597F4-01B9-4B99-803D-4DB405A6B804}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson6.HomeWork43", "Lesson6.HomeWork43\Lesson6.HomeWork43.csproj", "{BEF80AF4-76D3-4938-87F4-9B98FC9A969C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson6.HomeWork43", "Lesson6.HomeWork43\Lesson6.HomeWork43.csproj", "{BEF80AF4-76D3-4938-87F4-9B98FC9A969C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson7.HomeWork47", "Lesson7.HomeWork47\Lesson7.HomeWork47.csproj", "{8CDA204F-6981-47AA-B95F-18766CFE2F70}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson7.HomeWork50", "Lesson7.HomeWork50\Lesson7.HomeWork50.csproj", "{CE238C01-167D-4C70-AC60-77E2F55C6FCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson7.HomeWork52", "Lesson7.HomeWork52\Lesson7.HomeWork52.csproj", "{2CC0541B-852F-466A-BAC6-1F2410EC9032}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +45,18 @@ Global
 		{BEF80AF4-76D3-4938-87F4-9B98FC9A969C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BEF80AF4-76D3-4938-87F4-9B98FC9A969C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BEF80AF4-76D3-4938-87F4-9B98FC9A969C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CDA204F-6981-47AA-B95F-18766CFE2F70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CDA204F-6981-47AA-B95F-18766CFE2F70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CDA204F-6981-47AA-B95F-18766CFE2F70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CDA204F-6981-47AA-B95F-18766CFE2F70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE238C01-167D-4C70-AC60-77E2F55C6FCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE238C01-167D-4C70-AC60-77E2F55C6FCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE238C01-167D-4C70-AC60-77E2F55C6FCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE238C01-167D-4C70-AC60-77E2F55C6FCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CC0541B-852F-466A-BAC6-1F2410EC9032}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CC0541B-852F-466A-BAC6-1F2410EC9032}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CC0541B-852F-466A-BAC6-1F2410EC9032}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CC0541B-852F-466A-BAC6-1F2410EC9032}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

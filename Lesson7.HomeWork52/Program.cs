@@ -12,35 +12,47 @@ namespace Lesson7.HomeWork52
     {
         static void Main(string[] args)
         {
-            int[,] multiArray = InitiateAndFillMultiArrayInteger(3, 4, 1, 10);
+            int[,] multiArray = FillMultiArrayInteger(
+                length:3, 
+                heigth:4, 
+                minvalue:1,
+                maxvalue:10);
             PrintMultiArrayInteger(multiArray);
-
-
+            
             Console.WriteLine();
-            Console.Write("Среднее арифметическое каждого столбца: ");
-            for (int i = 0; i < multiArray.GetLength(1); i++)
+
+            PrintColumnSrednOrifm(multiArray);
+        }
+
+
+        /// <summary>
+        /// Подсчет среднего арифметического по столбцам
+        /// </summary>
+        /// <param name="array">Массив чисел</param>
+    public static void PrintColumnSrednOrifm(int[,] array)
+        {
+            Console.WriteLine("Среднее арифметическое каждого столбца: ");
+            for (int i = 0; i < array.GetLength(1); i++)
             {
                 double sredOrifm = 0;
-                for (int j = 0; j < multiArray.GetLength(0); j++)
-                {
-                    sredOrifm += multiArray[j, i];
-                }
-                sredOrifm = Math.Round((double)sredOrifm / multiArray.GetLength(0),2);
-                Console.Write(sredOrifm + " ");
- 
+                for (int j = 0; j < array.GetLength(0); j++)
+                    sredOrifm += array[j, i];
+                sredOrifm = Math.Round((double)sredOrifm / array.GetLength(0), 2);
+                Console.Write("{0,-5:f2}", sredOrifm);
             }
         }
 
-        /// <summary>
-        /// Печать двумерного массива
-        /// </summary>
-        /// <param name="array">Консольный вывод</param>
-        public static void PrintMultiArrayInteger(int[,] array)
+
+    /// <summary>
+    /// Печать двумерного массива
+    /// </summary>
+    /// <param name="array">Консольный вывод</param>
+    public static void PrintMultiArrayInteger(int[,] array)
         {
             for (int i = 0; i < array.GetLength(0); i++)
             {
                 for (int j = 0; j < array.GetLength(1); j++)
-                    Console.Write(array[i, j] + " ");
+                    Console.Write("{0,-5}",array[i, j]);
                 Console.WriteLine();
             }
         }
@@ -53,7 +65,7 @@ namespace Lesson7.HomeWork52
         /// <param name="minvalue">Минимальное значение для заполнения массива</param>
         /// <param name="maxvalue">Максимальное значение для заполнения массива</param>
         /// <returns>Двумерный массив</returns>
-        public static int[,] InitiateAndFillMultiArrayInteger(int length, int heigth, int minvalue, int maxvalue)
+        public static int[,] FillMultiArrayInteger(int length, int heigth, int minvalue, int maxvalue)
         {
             int[,] array = new int[length, heigth];
 

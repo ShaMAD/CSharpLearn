@@ -11,7 +11,7 @@ namespace Lesson6.HomeWork43
     {
         static void Main(string[] args)
         {
-            double[] coordinatesList = GetUserInputCoordinatesList();
+            double[] coordinatesList = GetUserInputCoordinatesArray();
 
             Console.Write("[");
             foreach (var item in coordinatesList)
@@ -29,7 +29,11 @@ namespace Lesson6.HomeWork43
             Console.WriteLine("x: " + x + ", y: " + y);
             
         }
-        private static double[] GetUserInputCoordinatesList()
+        // <summary>
+        /// Ввод 4 координаты в массив
+        /// </summary>
+        /// <returns>Массив 4 координат</returns>
+        private static double[] GetUserInputCoordinatesArray()
         {
             double parsedNubmer = 0;
             string userInput = string.Empty;

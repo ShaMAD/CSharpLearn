@@ -12,7 +12,6 @@ namespace Lession8.HomeWork58
     {
         static void Main(string[] args)
         {
-
             int[,] arrayA = FillMultiArrayInteger(2, 2, 1, 4);
             int[,] arrayB = FillMultiArrayInteger(arrayA.GetLength(1), 2, 1, 4);
 

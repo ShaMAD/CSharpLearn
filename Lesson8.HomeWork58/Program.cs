@@ -1,49 +1,38 @@
-﻿//Задача 54: Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.
-//Например, задан массив:
-//1 4 7 2
-//5 9 2 3
-//8 4 2 4
-//В итоге получается вот такой массив:
-//7 4 2 1
-//9 5 3 2
-//8 4 4 2
+﻿//Задача 58: Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
+//Например, даны 2 матрицы:
+//2 4 | 3 4
+//3 2 | 3 3
+//Результирующая матрица будет:
+//18 20
+//15 18
 
-
-namespace Lesson8.HomeWork54
+namespace Lession8.HomeWork58
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            int[,] myArray = FillMultiArrayInteger(5, 6, 1, 25);
 
-            // Копия массива для вывода двух массивов после каждой сортировки чисел в строке
-            //
-            //int[,] originalArray = myArray.Clone() as int[,];
+            int[,] arrayA = FillMultiArrayInteger(2, 2, 1, 4);
+            int[,] arrayB = FillMultiArrayInteger(arrayA.GetLength(1), 2, 1, 4);
 
-            PrintMultiArrayInteger(myArray);
+            int[,] arrayMultiplication = FillMultiArrayInteger(arrayA.GetLength(0), arrayB.GetLength(1), 0, 0);
 
-            for (int i = 0; i < myArray.GetLength(0); i++)
-                for (int j = 1; j < myArray.GetLength(1); j++)
+            PrintMultiArrayInteger(arrayA);
+            Console.WriteLine();
+            PrintMultiArrayInteger(arrayB);
+
+            for (int i = 0; i < arrayMultiplication.GetLength(0); i++)// столбец
+                for (int j = 0; j < arrayMultiplication.GetLength(1); j++) //строка
                 {
-                    int temp = myArray[i, j];
-                    for (int l = j - 1; l >= 0 && temp> myArray[i, l]; l--)
-                    {
-                        myArray[i, l + 1] = myArray[i, l];
-                        myArray[i, l] = temp;
-                    }
-                    // Вывод двух массивов после каждой сортировки чисел в строке
-                    //
-                    /*Console.Clear();
-                    PrintMultiArrayInteger(myArray);
-                    Console.WriteLine();
-                    PrintMultiArrayInteger(arraySorted);
-                    Console.ReadKey();*/
+                    int sum = 0;
+                    for (int k = 0; k < arrayA.GetLength(1) && i < arrayA.GetLength(0); k++) //строка
+                        sum += arrayA[i, k] * arrayB[k, j];
+                    arrayMultiplication[i, j] = sum;
                 }
             Console.WriteLine();
-            PrintMultiArrayInteger(myArray);
+            PrintMultiArrayInteger(arrayMultiplication);
         }
-
 
         /// <summary>
         /// Печать двумерного массива

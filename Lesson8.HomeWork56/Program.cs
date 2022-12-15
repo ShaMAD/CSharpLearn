@@ -10,7 +10,7 @@
 
 
 
-namespace ConsoleApp1
+namespace Lesson8.HomeWork56
 {
     internal class Program
     {

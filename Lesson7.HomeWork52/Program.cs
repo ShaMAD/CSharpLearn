@@ -15,12 +15,12 @@ namespace Lesson7.HomeWork52
         static void Main(string[] args)
         {
             int[,] multiArray = FillMultiArrayInteger(
-                length:3, 
-                heigth:4, 
-                minvalue:1,
-                maxvalue:10);
+                length: 3,
+                heigth: 4,
+                minvalue: 1,
+                maxvalue: 10);
             PrintMultiArrayInteger(multiArray);
-            
+
             Console.WriteLine();
 
             PrintColumnSrednOrifm(multiArray);
@@ -31,7 +31,7 @@ namespace Lesson7.HomeWork52
         /// Подсчет среднего арифметического по столбцам
         /// </summary>
         /// <param name="array">Массив чисел</param>
-    public static void PrintColumnSrednOrifm(int[,] array)
+        public static void PrintColumnSrednOrifm(int[,] array)
         {
             Console.WriteLine("Среднее арифметическое каждого столбца: ");
             for (int i = 0; i < array.GetLength(1); i++)
@@ -43,7 +43,9 @@ namespace Lesson7.HomeWork52
                 Console.Write("{0,-5:f2}", sredOrifm);
             }
         }
+    }
 
+    public class Array { 
 
     /// <summary>
     /// Печать двумерного массива

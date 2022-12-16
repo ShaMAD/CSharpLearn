@@ -4,6 +4,8 @@
 //34(1, 0, 0) 41(1, 1, 0)
 //27(0, 0, 1) 90(0, 1, 1)
 //26(1, 0, 1) 55(1, 1, 1)
+
+
 namespace Lesson8.HomeWork60
 {
     internal class Program
@@ -11,10 +13,10 @@ namespace Lesson8.HomeWork60
         static void Main(string[] args)
         {
             int[,,] myArray = new int[2, 2, 2];
+
             int[] numsArray = new int[myArray.Length*10];
             for (int i = 0; i < numsArray.Length; i++)
                 numsArray[i] = i+1;
-
 
             for (int i = 0; i < myArray.GetLength(0); i++)
                 for (int j = 0; j < myArray.GetLength(1); j++)
@@ -36,8 +38,6 @@ namespace Lesson8.HomeWork60
                         Console.Write("{0,2}({1}, {2}, {3}) ", myArray[j, k, i],j,k,i);
                     Console.WriteLine();
                 }
-                    
-
         }
     }
 }

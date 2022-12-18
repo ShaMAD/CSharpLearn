@@ -67,9 +67,9 @@ namespace Lesson8.HomeWork54
         /// <param name="minvalue">Минимальное значение для заполнения массива</param>
         /// <param name="maxvalue">Максимальное значение для заполнения массива</param>
         /// <returns>Двумерный массив</returns>
-        public static int[,] FillMultiArrayInteger(int length, int heigth, int minvalue, int maxvalue)
+        public static int[,] FillMultiArrayInteger(int heigth, int length, int minvalue, int maxvalue)
         {
-            int[,] array = new int[length, heigth];
+            int[,] array = new int[heigth, length];
 
             for (int i = 0; i < array.GetLength(0); i++)
                 for (int j = 0; j < array.GetLength(1); j++)

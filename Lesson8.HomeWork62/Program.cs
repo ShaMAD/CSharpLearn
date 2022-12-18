@@ -11,7 +11,7 @@ namespace Lesson8.HomeWork62
     {
         static void Main(string[] args)
         {
-            int[,] myArray = FillMultiArrayInteger(5, 5, 0, 0);
+            int[,] myArray = FillMultiArrayInteger(7, 5, 0, 0);
 
             int coordX = 0, coordY = 0, napravlenie = 0;
             //Console.WriteLine(array.GetLength(0)+"-"+ array.GetLength(1));
@@ -20,48 +20,39 @@ namespace Lesson8.HomeWork62
                 if (myArray[coordY, coordX] == 0)
                     myArray[coordY, coordX] = i + 1;
 
-                if ((coordX + 1) < myArray.GetLength(1) && napravlenie == 0)
-                    if (myArray[coordY, coordX + 1] == 0)
+                if ((coordX + 1) < myArray.GetLength(1) && napravlenie == 0 && (myArray[coordY, coordX + 1] == 0))
                     {
                         coordX++;
                         continue;
                     }  
-                    else
-                        napravlenie = napravlenie == 0 ? 1 : napravlenie;
                 else
                     napravlenie = napravlenie == 0 ? 1 : napravlenie;
 
-                if ((coordY + 1) < myArray.GetLength(0) && napravlenie == 1)
-                    if (myArray[coordY + 1, coordX] == 0)
+                if ((coordY + 1) < myArray.GetLength(0) && napravlenie == 1 && (myArray[coordY + 1, coordX] == 0))
                     {
                         coordY++;
                         continue;
                     }
-                    else
-                        napravlenie = napravlenie == 1 ? 2 : napravlenie;
                 else
                     napravlenie = napravlenie == 1 ? 2 : napravlenie;
-                if ((coordX - 1) >= 0 && napravlenie == 2)
-                    if (myArray[coordY, coordX - 1] == 0)
+
+                if ((coordX - 1) >= 0 && napravlenie == 2 && (myArray[coordY, coordX - 1] == 0))
                     {
                         coordX--;
                         continue;
                     }
-                    else
-                        napravlenie = napravlenie == 2 ? 3 : napravlenie;
                 else
                     napravlenie = napravlenie == 2 ? 3 : napravlenie;
-                if ((coordY - 1) >= 0 && napravlenie == 3)
-                    if (myArray[coordY - 1, coordX] == 0)
+                if ((coordY - 1) >= 0 && napravlenie == 3 && (myArray[coordY - 1, coordX] == 0))
                     {
                         coordY--;
                         continue;
                     }
-                    else
-                    {
-                        coordX++;
-                        napravlenie = napravlenie == 3 ? 0 : napravlenie;
-                    }
+                else
+                {
+                    coordX++;
+                    napravlenie = napravlenie == 3 ? 0 : napravlenie;
+                }
             }
             PrintMultiArrayInteger(myArray);
         }
@@ -88,9 +79,9 @@ namespace Lesson8.HomeWork62
         /// <param name="minvalue">Минимальное значение для заполнения массива</param>
         /// <param name="maxvalue">Максимальное значение для заполнения массива</param>
         /// <returns>Двумерный массив</returns>
-        public static int[,] FillMultiArrayInteger(int length, int heigth, int minvalue, int maxvalue)
+        public static int[,] FillMultiArrayInteger(int heigth, int length, int minvalue, int maxvalue)
         {
-            int[,] array = new int[length, heigth];
+            int[,] array = new int[heigth, length];
 
             for (int i = 0; i < array.GetLength(0); i++)
                 for (int j = 0; j < array.GetLength(1); j++)
